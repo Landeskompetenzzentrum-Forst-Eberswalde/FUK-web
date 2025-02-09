@@ -6,6 +6,9 @@
     import Card, { Content } from '@smui/card';
     import CircularProgress from '@smui/circular-progress';
 
+    import { PUBLIC_ICP_ANON_KEY, VITE_ICP_SERVER_URL } from '$lib/config';
+
+
     // https://github.com/ecomfe/echarts-gl
     //import 'echarts-gl';
 	import {getData} from '$lib/api.svelte';
@@ -124,8 +127,8 @@
             <CircularProgress indeterminate style="height: 32px; width: 32px;" />
         {/if}
         <div id="chart" class="chart" bind:this={chartElement} ></div>
-        {import.meta.env.VITE_ICP_SERVER_URL}
-        {import.meta.env.VITE_ICP_ANON_KEY}
+        {VITE_ICP_SERVER_URL}
+        {PUBLIC_ICP_ANON_KEY}
     </Card>
 </div>
 
