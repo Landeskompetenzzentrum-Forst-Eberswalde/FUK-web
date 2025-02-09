@@ -35,7 +35,8 @@ jobs:
         run: |
           npm run build
         env: # Or as an environment variable
-          credentials: ${{ vars.PUBLIC_ICP_ANON_KEY }}
+          PUBLIC_ICP_SERVER_URL: ${{ vars.PUBLIC_ICP_SERVER_URL }}
+          PUBLIC_ICP_ANON_KEY: ${{ vars.PUBLIC_ICP_ANON_KEY }}
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
