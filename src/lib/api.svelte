@@ -9,6 +9,7 @@
     }
 
     export const getData = async (table, queryObject = {}) => {
+        console.log('env', PUBLIC_ICP_SERVER_URL, PUBLIC_ICP_ANON_KEY);
         const query = Object.keys(queryObject).map(key => `${key}=${queryObject[key]}`).join('&');
         const response = await fetch(`${PUBLIC_ICP_SERVER_URL}${table}?${query}`, {
             headers: {
