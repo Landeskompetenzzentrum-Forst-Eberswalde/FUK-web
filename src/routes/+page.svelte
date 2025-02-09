@@ -124,6 +124,8 @@
             <CircularProgress indeterminate style="height: 32px; width: 32px;" />
         {/if}
         <div id="chart" class="chart" bind:this={chartElement} ></div>
+        {import.meta.env.VITE_ICP_SERVER_URL}
+        {import.meta.env.VITE_ICP_ANON_KEY}
     </Card>
 </div>
 

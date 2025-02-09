@@ -32,6 +32,8 @@ jobs:
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
+          VITE_ICP_SERVER_URL: ${{ vars.VITE_API_URL }}
+          VITE_ICP_ANON_KEY: ${{ vars.PUBLIC_ICP_ANON_KEY }}
           PUBLIC_ICP_SERVER_URL: ${{ vars.PUBLIC_ICP_SERVER_URL }}
           PUBLIC_ICP_ANON_KEY: ${{ vars.PUBLIC_ICP_ANON_KEY }}
         run: |
