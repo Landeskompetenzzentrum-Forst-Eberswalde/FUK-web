@@ -4,6 +4,7 @@
 		PUBLIC_ICP_SERVER_URL,
 		PUBLIC_ICP_ANON_KEY
 	} from '$env/static/public';
+    
 	import { onMount } from 'svelte';
     import * as echarts from 'echarts';
     import Card, { Content } from '@smui/card';
