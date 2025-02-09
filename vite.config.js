@@ -6,6 +6,10 @@ import { defineConfig } from 'vite';
 import { SvelteKitPWA } from '@vite-pwa/sveltekit'
 
 export default defineConfig({
+	define: {
+        'process.env.VITE_ICP_SERVER_URL': JSON.stringify(process.env.VITE_ICP_SERVER_URL), // Important for server-side
+		'process.env.PUBLIC_ICP_ANON_KEY': JSON.stringify(process.env.PUBLIC_ICP_ANON_KEY) // Important for client-side
+    },
 	plugins: [
 		sveltekit(),
 		tailwindcss(),
